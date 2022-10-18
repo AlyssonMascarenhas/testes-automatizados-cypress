@@ -1,0 +1,27 @@
+{
+  "name": "testes-automatizados-cypress",
+  "version": "1.0.0",
+  "description": "teste automatizado da requisição post da serie viver de testes qacademy",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasLira08/testes-automatizados-cypress.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "cypress"
+  ],
+  "author": "Lucas Lira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasLira08/testes-automatizados-cypress/issues"
+  },
+  "homepage": "https://github.com/lucasLira08/testes-automatizados-cypress#readme",
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  }
+}
