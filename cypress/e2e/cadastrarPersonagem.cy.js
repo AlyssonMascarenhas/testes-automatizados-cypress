@@ -33,4 +33,25 @@ describe('POST /characters', () => {
             expect(response.status).to.eq(201)
         })
     });
+
+    it.only('Não deve permiter cadastrar um personagem duas vezes', () => {
+        var character = {
+            name: 'Wanda Maximoff',
+            alias: 'Feiticeira Escarlate',
+            team: ['Vingadores'],
+            active: true
+        }
+        cy.request({
+            method: 'POST',
+            url: '/characters',
+            body: character,
+            failOnStatusCode: false,
+            headers: {
+                Authorization: Cypress.env('token')
+            }
+        }).then(function(response){
+            expect(response.status).to.eq(400)
+            expect(response.body.error).to.eq("Duplicate character")
+        })
+    });
 });
